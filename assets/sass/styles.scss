@@ -1,0 +1,530 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+// LIBRARY
+
+@import "../library/css/bootstrap.css";
+@import "../library/css/card.css";
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+}
+
+.form1 {
+  border: 1px solid #c1c1c1;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &__form {
+    h1 {
+      font-size: 24px;
+      color: #2b2b2b;
+    }
+    .underline {
+      width: 50px;
+      height: 2px;
+      background-color: #a7a4a4;
+    }
+
+    .selectWrapper {
+      position: relative;
+      .material-icons {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "liga";
+        ms-font-feature-settings: "liga";
+      }
+
+      select {
+        border: 2px solid #949494;
+        border-radius: 4px;
+        padding: 0 10px;
+        height: 46px;
+        font-size: 14px;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+      }
+      select::-ms-expand {
+        display: none;
+      }
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      color: #716a71;
+    }
+
+    .form-group {
+      input {
+        width: 100%;
+        border: 2px solid #949494;
+        border-radius: 4px;
+        padding: 0 10px;
+        line-height: 20px;
+        height: 46px;
+        font-size: 14px;
+
+        &:focus {
+          outline: none;
+          border: 2px solid #949494;
+          box-shadow: none;
+        }
+      }
+      input::-ms-clear {
+        display: none;
+      }
+
+      .iconWrapper {
+        position: relative;
+        &:hover {
+          cursor: pointer;
+        }
+        span {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 18px;
+        }
+      }
+
+      // VALIDATION
+      &-withIcon {
+        position: relative;
+
+        .material-icons {
+          position: absolute;
+          right: 15px;
+          top: 40px;
+          font-size: 18px;
+          display: none;
+          text-rendering: optimizeLegibility;
+          font-feature-settings: "liga";
+          ms-font-feature-settings: "liga";
+        }
+      }
+
+      &--success {
+        input {
+          border-color: #98b666;
+        }
+        select {
+          border-color: #98b666;
+        }
+        .material-icons {
+          color: #98b666;
+          display: block;
+        }
+      }
+
+      &--error {
+        input {
+          border-color: red;
+        }
+        select {
+          border-color: red;
+        }
+        .material-icons {
+          color: red;
+        }
+        .state {
+          display: none;
+        }
+      }
+    }
+
+    .month {
+      padding: 0 5px 0 0;
+    }
+
+    .year {
+      padding: 0 0 0 5px;
+    }
+
+    .cvv {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .infobox {
+        display: none;
+        background-color: #ffffff;
+        font-size: 15px;
+        z-index: 3;
+        border: 1px solid #949494;
+        position: absolute;
+        width: 100px;
+        height: 75px;
+        top: 0;
+        right: 0;
+        border-radius: 5px;
+        padding: 10px;
+        word-break: break-word;
+      }
+
+      .material-icons {
+        margin-left: 10px;
+        display: block;
+        position: relative;
+        z-index: 2;
+        color: #c1c1c1;
+        font-size: 18px;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "liga";
+        ms-font-feature-settings: "liga";
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .customTooltip {
+        &:hover {
+          .infobox {
+            display: block;
+          }
+        }
+      }
+    }
+    .conditions {
+      text-align: center;
+      font-size: 12px;
+      a {
+        color: #7765bf;
+        text-decoration: underline;
+      }
+    }
+    .submitButton {
+      width: 100%;
+      background-color: #7765bf;
+      padding: 15px 0;
+      border: none;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      opacity: 0.8;
+      border-radius: 2px;
+      span {
+        font-size: 20px;
+        margin-right: 7px;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "liga";
+        ms-font-feature-settings: "liga";
+      }
+    }
+  }
+  &__priceDetail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("https://image.shutterstock.com/image-photo/technology-library-student-learning-concept-600w-454799062.jpg")
+      no-repeat center center;
+    background-size: cover;
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background-color: #7765bf;
+      opacity: 0.8;
+    }
+    &-content {
+      position: relative;
+      &-product {
+        text-align: center;
+
+        &-detail {
+          img {
+            max-height: 150px;
+          }
+          &-description {
+            color: #ffffff;
+            p {
+              font: {
+                size: 16px;
+                weight: bold;
+              }
+
+              margin: 10px 0 0;
+            }
+            span {
+              font: {
+                size: 12px;
+              }
+            }
+          }
+        }
+        &-amount {
+          margin-top: 15px;
+          color: #ffffff;
+          font: {
+            size: 16px;
+            weight: bold;
+          }
+        }
+      }
+      &-discountForm {
+        position: relative;
+
+        button {
+          position: absolute;
+          top: 20px;
+          right: 5px;
+          background: none;
+          border: none;
+          &:hover,
+          &:focus {
+            outline: none;
+          }
+          span {
+            color: greenyellow;
+            font-size: 25px;
+          }
+        }
+      }
+      &-price {
+        color: #ffffff;
+        &-description {
+          display: flex;
+          justify-content: space-between;
+
+          span {
+            font: {
+              size: 18px;
+              weight: bold;
+            }
+          }
+        }
+        &-discount {
+          display: flex;
+          justify-content: space-between;
+          span {
+            font: {
+              size: 14px;
+            }
+          }
+        }
+      }
+      &-description {
+        color: #ffffff;
+        h1 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 13px;
+          margin: 0;
+        }
+        span {
+          font-size: 11px;
+          margin-top: 10px;
+        }
+      }
+      &-guarantee {
+        display: flex;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        p {
+          color: #ffffff;
+          font-size: 12px;
+          margin: 0;
+        }
+        span {
+          color: #ffffff;
+          font-size: 11px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+.form2 {
+  h1 {
+    font-size: 24px;
+    color: #716a71;
+  }
+
+  label {
+    display: block;
+    font-size: 12px;
+    color: #716a71;
+  }
+
+  .selectWrapper {
+    position: relative;
+    .material-icons {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-rendering: optimizeLegibility;
+      font-feature-settings: "liga";
+      ms-font-feature-settings: "liga";
+    }
+    select {
+      border: 1px solid #949494;
+      border-radius: 4px;
+      padding: 0 10px;
+      height: 46px;
+      font-size: 14px;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+  }
+
+  .form-group {
+    input {
+      width: 100%;
+      border: 1px solid #949494;
+      border-radius: 4px;
+      padding: 0 10px;
+      line-height: 20px;
+      height: 46px;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #949494;
+        box-shadow: none;
+      }
+    }
+    input::-ms-clear {
+      display: none;
+    }
+
+    &-withIcon {
+      position: relative;
+
+      .material-icons {
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        font-size: 18px;
+        display: block;
+        color: #949494;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "liga";
+        ms-font-feature-settings: "liga";
+        z-index: 0;
+      }
+    }
+
+    // VALIDATION
+
+    &--success {
+      input {
+        border-color: #98b666;
+      }
+      select {
+        border-color: #98b666;
+      }
+      .material-icons {
+        color: #98b666;
+      }
+    }
+
+    &--error {
+      input {
+        border-color: red;
+      }
+      select {
+        border-color: red;
+      }
+      .material-icons {
+        color: red;
+      }
+      .state {
+        display: none;
+      }
+    }
+  }
+
+  .description {
+    p {
+      color: #716a71;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  .submitButton {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    background-color: #21d59e;
+    color: #ffffff;
+    border: none;
+    padding: 15px 0;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+  .month {
+    margin-right: -1px;
+    select {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+  .year {
+    select {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .form1 {
+    &__form {
+      padding: 30px 0;
+
+      h1 {
+        font-size: 20px;
+      }
+      .form-group {
+        .cvv {
+          padding: 10px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .form1 {
+    &__priceDetail {
+      &-content {
+        &-product {
+          display: flex;
+          justify-content: space-between;
+          &-detail {
+            display: flex;
+            justify-content: space-between;
+
+            &-description {
+              margin-left: 10px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../assets/sass/styles.css" />
+    <title>Form 1</title>
+  </head>
+
+  <body>
+    <a href="../index.html">
+      <button type="button">
+        Geri
+      </button>
+    </a>
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-12">
+          <div class="form1">
+            <div class="container-fluid p-0">
+              <div class="row no-gutters">
+                <div class="col-12 col-md-6 py-5">
+                  <div class="form1__form py-md-5 py-2 px-md-5 px-3">
+                    <h1>Secure checkout</h1>
+                    <div class="underline mb-5"></div>
+                    <form id="form1" name="form1" method="post">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-12 p-0">
+                            <!-- Validation SUCCES icin 'form-group-withIcon form-group--success' claslarini ekle!!  -->
+                            <div class="form-group form-group-withIcon">
+                              <label for="email">Email address</label>
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="name@example.com"
+                              />
+                              <span class="material-icons state">
+                                check
+                              </span>
+                            </div>
+                          </div>
+                          <div class="col-12 p-0">
+                            <!--  ICONLAR ISTENILEN ILE DEGISTIRILCEK -->
+                            <div class="form-group">
+                              <label for="cardNumber">Card Number</label>
+                              <div class="input-wrapped full" id="validateCard">
+                                <input
+                                  type="text"
+                                  size="20"
+                                  name="cardNumber"
+                                  maxlength="16"
+                                  id="cardNumber"
+                                  class="full form-control"
+                                  placeholder="1234-5678-9012-3456"
+                                  data-creditcard="true"
+                                />
+                                <i class="icon-ok"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 p-0">
+                            <label for="expirationDate">Expiration date</label>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-6 col-lg-3 month iconWrapper">
+                                  <!-- Validation SUCCES icin 'selectWrapper--success' claslarini ekle!!  -->
+                                  <div class="selectWrapper form-group">
+                                    <span class="material-icons">
+                                      keyboard_arrow_down
+                                    </span>
+                                    <select
+                                      class="form-control"
+                                      name="month"
+                                      id="month"
+                                    >
+                                      <option selected value="Month"
+                                        >Month</option
+                                      >
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      <option value="11">11</option>
+                                      <option value="12">12</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-6 col-lg-3 year iconWrapper">
+                                  <!-- Validation ERROR icin 'form-group--error' claslarini ekle!!  -->
+                                  <div class="selectWrapper form-group">
+                                    <span class="material-icons">
+                                      keyboard_arrow_down
+                                    </span>
+                                    <select
+                                      class="form-control"
+                                      id="year"
+                                      name="year"
+                                      value=""
+                                    >
+                                      <option selected value="Year"
+                                        >Year</option
+                                      >
+                                      <option value="2019">2019</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2021">2021</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-lg-5 px-0 px-lg-3">
+                                  <div class="form-group cvv w-100">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="cvv"
+                                      name="cvv"
+                                      placeholder="Security Code"
+                                      maxlength="3"
+                                    />
+                                    <div class="customTooltip">
+                                      <span class="material-icons">
+                                        info
+                                      </span>
+                                      <div class="infobox">
+                                        infoo
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 p-0">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="nameonthecard"
+                                name="nameonthecard"
+                                placeholder="Name on the card"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-12 conditions mt-3">
+                            <p>
+                              Bylacinghis orderyou agree to the
+                              <a href="#">Terms and Conditions</a>
+                            </p>
+                          </div>
+                          <button type="submit" class="submitButton">
+                            <span class="material-icons">
+                              https
+                            </span>
+                            Place order
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form1__priceDetail py-md-5 py-2 px-md-5 px-3">
+                    <div class="form1__priceDetail-overlay"></div>
+                    <div class="form1__priceDetail-content py-5">
+                      <div class="form1__priceDetail-content-product">
+                        <div class="form1__priceDetail-content-product-detail">
+                          <img
+                            src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1435148503l/25787227._SX318_.jpg"
+                            alt="book"
+                          />
+                          <div
+                            class="form1__priceDetail-content-product-detail-description"
+                          >
+                            <p>Better CSS width Sass</p>
+                            <span>Pdf, doc, kindle</span>
+                          </div>
+                        </div>
+                        <div class="form1__priceDetail-content-product-amount">
+                          <span>$1234</span>
+                        </div>
+                      </div>
+                      <div class="form1__priceDetail-content-discountForm">
+                        <form
+                          id="form1Discount"
+                          name="form1Discount"
+                          method="post"
+                        >
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12 p-0">
+                                <div class="form-group py-3">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="discountCode"
+                                    placeholder="Have a discount code ?"
+                                  />
+                                  <button type="submit">
+                                    <span class="material-icons">
+                                      cached
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="form1__priceDetail-content-price">
+                        <div
+                          class="form1__priceDetail-content-price-description"
+                        >
+                          <span>Total Price:</span>
+                          <span>$123.29</span>
+                        </div>
+                        <div class="form1__priceDetail-content-price-discount">
+                          <span>Vat:20%</span>
+                          <span>$17.59</span>
+                        </div>
+                      </div>
+                      <div class="form1__priceDetail-content-description py-5">
+                        <h1>Hotline</h1>
+                        <p><strong>+31 88 000 0000</strong> (International)</p>
+                        <p><strong>+31 88 000 0000 </strong>(USA / Canada)</p>
+                        <span
+                          >(24/7 english phone support for online payment
+                          related issues)</span
+                        >
+                      </div>
+                      <div class="form1__priceDetail-content-guarantee">
+                        <img
+                          src="http://www.pngall.com/wp-content/uploads/2016/04/Guarantee-Free-Download-PNG.png"
+                          alt="guarantee"
+                        />
+                        <div
+                          class="form1__priceDetail-content-guarantee-description pl-2"
+                        >
+                          <p>Money back guarantee</p>
+                          <span>within 30 days of purchase</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="../assets/library/js/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../assets/library/js/jquery-validation.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../assets/library/js/jquery.mask.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../assets/library/js/jquery.creditCardValidator.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../assets/library/js/creditcard.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#cardNumber").mask("0000-0000-0000-0000");
+
+        $.validator.addMethod(
+          "valueNotEquals",
+          function (value, element, arg) {
+            return arg != value;
+          },
+          "Value must not equal arg."
+        );
+
+        $("#form1").validate({
+          rules: {
+            email: {
+              required: true,
+              email: true,
+            },
+            cardNumber: {
+              required: true,
+              minlength: 19,
+              maxlength: 19,
+            },
+            month: {
+              required: true,
+              valueNotEquals: "Month",
+            },
+            year: {
+              required: true,
+              valueNotEquals: "Year",
+            },
+            cvv: {
+              required: true,
+              maxlength: 3,
+              minlength: 3,
+              number: true,
+            },
+            nameonthecard: {
+              required: true,
+            },
+          },
+          errorPlacement: function () {},
+          highlight: function (element) {
+            $(element)
+              .parents(".form-group, .selectWrapper")
+              .removeClass("form-group--success");
+            $(element)
+              .parents(".form-group, .selectWrapper")
+              .addClass("form-group--error");
+          },
+          unhighlight: function (element) {
+            $(element)
+              .parents(".form-group, .selectWrapper")
+              .removeClass("form-group--error");
+            $(element)
+              .parents(".form-group, .selectWrapper")
+              .addClass("form-group--success");
+          },
+          submitHandler: function () {
+            return true;
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

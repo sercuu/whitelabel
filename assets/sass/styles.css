@@ -1,0 +1,441 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "../library/css/bootstrap.css";
+@import "../library/css/card.css";
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+}
+
+.form1 {
+  border: 1px solid #c1c1c1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.form1__form h1 {
+  font-size: 24px;
+  color: #2b2b2b;
+}
+.form1__form .underline {
+  width: 50px;
+  height: 2px;
+  background-color: #a7a4a4;
+}
+.form1__form .selectWrapper {
+  position: relative;
+}
+.form1__form .selectWrapper .material-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+}
+.form1__form .selectWrapper select {
+  border: 2px solid #949494;
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 46px;
+  font-size: 14px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.form1__form .selectWrapper select::-ms-expand {
+  display: none;
+}
+.form1__form label {
+  display: block;
+  font-size: 12px;
+  color: #716a71;
+}
+.form1__form .form-group input {
+  width: 100%;
+  border: 2px solid #949494;
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 20px;
+  height: 46px;
+  font-size: 14px;
+}
+.form1__form .form-group input:focus {
+  outline: none;
+  border: 2px solid #949494;
+  box-shadow: none;
+}
+.form1__form .form-group input::-ms-clear {
+  display: none;
+}
+.form1__form .form-group .iconWrapper {
+  position: relative;
+}
+.form1__form .form-group .iconWrapper:hover {
+  cursor: pointer;
+}
+.form1__form .form-group .iconWrapper span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+}
+.form1__form .form-group-withIcon {
+  position: relative;
+}
+.form1__form .form-group-withIcon .material-icons {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  font-size: 18px;
+  display: none;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+}
+.form1__form .form-group--success input {
+  border-color: #98b666;
+}
+.form1__form .form-group--success select {
+  border-color: #98b666;
+}
+.form1__form .form-group--success .material-icons {
+  color: #98b666;
+  display: block;
+}
+.form1__form .form-group--error input {
+  border-color: red;
+}
+.form1__form .form-group--error select {
+  border-color: red;
+}
+.form1__form .form-group--error .material-icons {
+  color: red;
+}
+.form1__form .form-group--error .state {
+  display: none;
+}
+.form1__form .month {
+  padding: 0 5px 0 0;
+}
+.form1__form .year {
+  padding: 0 0 0 5px;
+}
+.form1__form .cvv {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.form1__form .cvv .infobox {
+  display: none;
+  background-color: #ffffff;
+  font-size: 15px;
+  z-index: 3;
+  border: 1px solid #949494;
+  position: absolute;
+  width: 100px;
+  height: 75px;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  padding: 10px;
+  word-break: break-word;
+}
+.form1__form .cvv .material-icons {
+  margin-left: 10px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  color: #c1c1c1;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+}
+.form1__form .cvv .material-icons:hover {
+  cursor: pointer;
+}
+.form1__form .cvv .customTooltip:hover .infobox {
+  display: block;
+}
+.form1__form .conditions {
+  text-align: center;
+  font-size: 12px;
+}
+.form1__form .conditions a {
+  color: #7765bf;
+  text-decoration: underline;
+}
+.form1__form .submitButton {
+  width: 100%;
+  background-color: #7765bf;
+  padding: 15px 0;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+.form1__form .submitButton span {
+  font-size: 20px;
+  margin-right: 7px;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+}
+.form1__priceDetail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("https://image.shutterstock.com/image-photo/technology-library-student-learning-concept-600w-454799062.jpg") no-repeat center center;
+  background-size: cover;
+}
+.form1__priceDetail-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #7765bf;
+  opacity: 0.8;
+}
+.form1__priceDetail-content {
+  position: relative;
+}
+.form1__priceDetail-content-product {
+  text-align: center;
+}
+.form1__priceDetail-content-product-detail img {
+  max-height: 150px;
+}
+.form1__priceDetail-content-product-detail-description {
+  color: #ffffff;
+}
+.form1__priceDetail-content-product-detail-description p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+.form1__priceDetail-content-product-detail-description span {
+  font-size: 12px;
+}
+.form1__priceDetail-content-product-amount {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form1__priceDetail-content-discountForm {
+  position: relative;
+}
+.form1__priceDetail-content-discountForm button {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  background: none;
+  border: none;
+}
+.form1__priceDetail-content-discountForm button:hover, .form1__priceDetail-content-discountForm button:focus {
+  outline: none;
+}
+.form1__priceDetail-content-discountForm button span {
+  color: greenyellow;
+  font-size: 25px;
+}
+.form1__priceDetail-content-price {
+  color: #ffffff;
+}
+.form1__priceDetail-content-price-description {
+  display: flex;
+  justify-content: space-between;
+}
+.form1__priceDetail-content-price-description span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.form1__priceDetail-content-price-discount {
+  display: flex;
+  justify-content: space-between;
+}
+.form1__priceDetail-content-price-discount span {
+  font-size: 14px;
+}
+.form1__priceDetail-content-description {
+  color: #ffffff;
+}
+.form1__priceDetail-content-description h1 {
+  font-size: 16px;
+}
+.form1__priceDetail-content-description p {
+  font-size: 13px;
+  margin: 0;
+}
+.form1__priceDetail-content-description span {
+  font-size: 11px;
+  margin-top: 10px;
+}
+.form1__priceDetail-content-guarantee {
+  display: flex;
+}
+.form1__priceDetail-content-guarantee img {
+  width: 40px;
+  height: 40px;
+}
+.form1__priceDetail-content-guarantee p {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 0;
+}
+.form1__priceDetail-content-guarantee span {
+  color: #ffffff;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.form2 h1 {
+  font-size: 24px;
+  color: #716a71;
+}
+.form2 label {
+  display: block;
+  font-size: 12px;
+  color: #716a71;
+}
+.form2 .selectWrapper {
+  position: relative;
+}
+.form2 .selectWrapper .material-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+}
+.form2 .selectWrapper select {
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 46px;
+  font-size: 14px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.form2 .selectWrapper select::-ms-expand {
+  display: none;
+}
+.form2 .form-group input {
+  width: 100%;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 20px;
+  height: 46px;
+  font-size: 14px;
+}
+.form2 .form-group input:focus {
+  outline: none;
+  border: 1px solid #949494;
+  box-shadow: none;
+}
+.form2 .form-group input::-ms-clear {
+  display: none;
+}
+.form2 .form-group-withIcon {
+  position: relative;
+}
+.form2 .form-group-withIcon .material-icons {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  font-size: 18px;
+  display: block;
+  color: #949494;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+  ms-font-feature-settings: "liga";
+  z-index: 0;
+}
+.form2 .form-group--success input {
+  border-color: #98b666;
+}
+.form2 .form-group--success select {
+  border-color: #98b666;
+}
+.form2 .form-group--success .material-icons {
+  color: #98b666;
+}
+.form2 .form-group--error input {
+  border-color: red;
+}
+.form2 .form-group--error select {
+  border-color: red;
+}
+.form2 .form-group--error .material-icons {
+  color: red;
+}
+.form2 .form-group--error .state {
+  display: none;
+}
+.form2 .description p {
+  color: #716a71;
+  font-size: 12px;
+  text-align: center;
+}
+.form2 .submitButton {
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  background-color: #21d59e;
+  color: #ffffff;
+  border: none;
+  padding: 15px 0;
+}
+.form2 .submitButton:hover, .form2 .submitButton:focus {
+  outline: none;
+}
+.form2 .month {
+  margin-right: -1px;
+}
+.form2 .month select {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.form2 .year select {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+@media (min-width: 767px) {
+  .form1__form {
+    padding: 30px 0;
+  }
+  .form1__form h1 {
+    font-size: 20px;
+  }
+  .form1__form .form-group .cvv {
+    padding: 10px 0 0 0;
+  }
+}
+@media (min-width: 1023px) {
+  .form1__priceDetail-content-product {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form1__priceDetail-content-product-detail {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form1__priceDetail-content-product-detail-description {
+    margin-left: 10px;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
