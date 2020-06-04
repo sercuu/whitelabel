@@ -23,6 +23,37 @@
           <div class="form2 py-5 px-4">
             <h1 class="text-center">Checkout</h1>
             <form name="form2" id="form2" method="post">
+              <div class="col-12 p-0">
+                <div class="container mt-5">
+                  <div class="row">
+                    <div class="col-6 p-0">
+                      <div class="form-group mr--1">
+                        <label for="cvv">First Name</label>
+                        <input
+                          type="text"
+                          class="form-control rightStraightEdge"
+                          id="firstname"
+                          name="firstname"
+                          placeholder="First name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6 p-0">
+                      <div class="form-group">
+                        <label for="zipcode">Last name</label>
+                        <input
+                          type="text"
+                          class="form-control leftstraightEdge"
+                          id="lastname"
+                          name="lastname"
+                          placeholder="Last name"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="form-group form-group-withIcon">
                 <label for="cardNumber">Card Number</label>
                 <input
@@ -44,11 +75,15 @@
                   <div class="row">
                     <div class="col-6 p-0 month iconWrapper">
                       <!-- Validation SUCCES icin 'selectWrapper--success' claslarini ekle!!  -->
-                      <div class="selectWrapper month form-group">
+                      <div class="selectWrapper mr--1 form-group">
                         <span class="material-icons">
                           keyboard_arrow_down
                         </span>
-                        <select class="form-control" name="month" id="month">
+                        <select
+                          class="form-control rightStraightEdge"
+                          name="month"
+                          id="month"
+                        >
                           <option selected value="Month">Month</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -66,12 +101,12 @@
                       </div>
                     </div>
                     <div class="col-6 p-0 iconWrapper">
-                      <div class="selectWrapper year form-group">
+                      <div class="selectWrapper form-group">
                         <span class="material-icons">
                           keyboard_arrow_down
                         </span>
                         <select
-                          class="form-control"
+                          class="form-control leftstraightEdge"
                           id="year"
                           name="year"
                           value=""
@@ -167,6 +202,13 @@
 
         $("#form2").validate({
           rules: {
+            firstname: {
+              required: true,
+            },
+
+            lastname: {
+              required: true,
+            },
             cardNumber: {
               required: true,
               minlength: 19,

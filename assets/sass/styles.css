@@ -296,6 +296,9 @@ body {
   margin-top: 10px;
 }
 
+.form2 {
+  max-width: 500px;
+}
 .form2 h1 {
   font-size: 24px;
   color: #716a71;
@@ -400,16 +403,17 @@ body {
 .form2 .submitButton:hover, .form2 .submitButton:focus {
   outline: none;
 }
-.form2 .month {
+.form2 .mr--1 {
   margin-right: -1px;
 }
-.form2 .month select {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+.form2 .rightStraightEdge {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  margin-right: -1px !important;
 }
-.form2 .year select {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+.form2 .leftstraightEdge {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
 }
 
 @media (min-width: 767px) {

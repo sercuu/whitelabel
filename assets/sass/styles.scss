@@ -349,6 +349,7 @@ body {
   }
 }
 .form2 {
+  max-width: 500px;
   h1 {
     font-size: 24px;
     color: #716a71;
@@ -475,18 +476,18 @@ body {
       outline: none;
     }
   }
-  .month {
+  .mr--1 {
     margin-right: -1px;
-    select {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
-    }
   }
-  .year {
-    select {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
-    }
+
+  .rightStraightEdge {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    margin-right: -1px !important;
+  }
+  .leftstraightEdge {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
   }
 }
 
